@@ -1,0 +1,21 @@
+<!-- <div class="cont"> -->
+    <body>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value); loginForm.reset();">
+            <label for="username">Username:</label><br>
+            <input ngModel required #username="ngModel" type="text" id="username" name="username" placeholder="Try 'Admin'"><br>
+            
+            <label for="password">Password:</label><br>
+            <input ngModel required #password="ngModel" type="password" id="password" name="password" placeholder="Try 'Admin'"><br><br>
+            <div 
+                class="red" 
+                *ngIf="loginForm.submitted && 
+                !( ( username.value==='Admin' && password.value==='Admin') 
+                || (username.value==='MyName' && password.value==='test') )">Invalid username</div>
+            <input type="submit">
+        </form>
+    </body>
+    
+    <!-- <button (click)="newMessage('zzz')" class="button">New message</button>
+    {{message}}
+    placeholder="Try `Admin`"
+     -->

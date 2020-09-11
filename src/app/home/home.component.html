@@ -1,0 +1,47 @@
+Logged in as {{message}}
+
+<body>
+    <div class="box">
+        <div class="applecard">
+            <div>Apples</div>
+            <div>{{this.apples}}</div>
+            <div class="addRemove">
+                <button class="button" [disabled]="disabled" (click)="incrApple()">+</button>
+                <button class="button" [disabled]="disabled" (click)="decrApple()">-</button>
+            </div>
+        </div>
+        <div class="orangecard">
+            <div>Oranges</div>
+            <div>{{this.oranges}}</div>
+            <div class="addRemove">
+                <button class="button" [disabled]="disabled" (click)="incrOrange()">+</button>
+                <button class="button" [disabled]="disabled" (click)="decrOrange()">-</button>
+            </div>
+        </div>
+        <div class="grapescard">
+            <div>Grapes</div>
+            <div>{{this.grapes}}</div>
+            <div class="addRemove">
+                <button class="button" [disabled]="disabled" (click)="incrGrape()">+</button>
+                <button class="button" [disabled]="disabled" (click)="decrGrape()">-</button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="red">Not permitted</div> -->
+    <div class="parent">
+        <div class="borderer">
+            <div class="basket" *ngFor="let fruit of basket">
+                <div class={{fruit}}></div>
+                <div class="strips" >
+                    <!-- <ul>
+                        <li *ngFor="let fruit of basket">
+                            <div class={{fruit}}></div>
+                        </li>
+                    </ul> -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
